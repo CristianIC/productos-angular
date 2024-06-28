@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Desea eliminar el siguiente registro?</h2>
+<mat-dialog-content>
+  Se va a eliminar el registro del sistema: {{data.nombre}}
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="cancelar()">Cancelar</button>
+  <button mat-button mat-dialog-close cdkFocusInitial (click)="eliminar()">Eliminar</button>
+</mat-dialog-actions>

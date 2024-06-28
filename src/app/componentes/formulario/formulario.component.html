@@ -1,0 +1,27 @@
+<mat-card appearance="outlined">
+    <mat-card-content>
+        <p>{{accion}} producto:</p>
+        <form [formGroup]="formulario">
+            <mat-form-field>
+                <mat-label>Nombre</mat-label>
+                <input matInput [formControl] = "formulario.controls.nombre">
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-label>Descripción</mat-label>
+                <textarea matInput [formControl] = "formulario.controls.descripcion"></textarea>
+            </mat-form-field><br>
+            <mat-form-field floatLabel="always">
+                <mat-label>Precio</mat-label>
+                <input matInput type="number" class="example-right-align" placeholder="0" [formControl] = "formulario.controls.precio"/>
+                <span matTextPrefix>$&nbsp;</span>    
+            </mat-form-field>
+        </form>
+        
+        <section>    
+            <div class="example-button-row">
+            <button mat-flat-button (click) = "validarAccion()">{{accion}} producto</button>      
+            </div>
+        </section>
+    </mat-card-content>
+  </mat-card>
+  <br><br>

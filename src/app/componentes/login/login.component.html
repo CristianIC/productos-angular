@@ -1,0 +1,23 @@
+
+<mat-card appearance="outlined">
+    <mat-card-content>
+        <p>INICIAR SESION</p>
+        <form [formGroup]="formulario">
+            <mat-form-field>
+                <mat-label>Usuario</mat-label>
+                <input matInput [formControl] = "formulario.controls.username">
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput [formControl] = "formulario.controls.password">
+            </mat-form-field><br>
+
+        </form>
+        
+        <section>    
+            <div class="example-button-row">
+            <button mat-flat-button (click) = "login()">Iniciar Sesion</button>      
+            </div>
+        </section>
+    </mat-card-content>
+  </mat-card>
